@@ -16,7 +16,7 @@ yarn add rn-shared-components
 
 ### Box
 
-This component is a simple wrapper for View component. It has the same props as View component and some additional props listed in [Box Props](Box/Box.props.md)
+This component is a simple wrapper for View component. It has the same props as View component and some additional props listed in [Box Props](components/Box/Box.props.md)
 
 ```jsx
 import { Box } from "rn-shared-components";
@@ -30,7 +30,7 @@ const App = () => (
 
 ### TouchableOpacity
 
-This component is a simple wrapper for TouchableOpacity component. It has the same props as TouchableOpacity component and some additional props listed in [Box Props](Box/Box.props.md)
+This component is a simple wrapper for TouchableOpacity component. It has the same props as TouchableOpacity component and some additional props listed in [Box Props](components/Box/Box.props.md)
 
 ```jsx
 import { TouchableOpacity } from "rn-shared-components";
@@ -44,7 +44,7 @@ const App = () => (
 
 ### Text
 
-This component is a simple wrapper for Text component. It has the same props as Text component and some additional props listed in [Text Props](Text/Text.props.md)
+This component is a simple wrapper for Text component. It has the same props as Text component and some additional props listed in [Text Props](components/Text/Text.props.md)
 
 ```jsx
 import { Box } from "rn-shared-components";
