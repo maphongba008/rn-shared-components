@@ -47,11 +47,11 @@ const App = () => (
 This component is a simple wrapper for Text component. It has the same props as Text component and some additional props listed in [Text Props](components/Text/Text.props.md)
 
 ```jsx
-import { Box } from "rn-shared-components";
+import { Text } from "rn-shared-components";
 
 const App = () => (
-  <Box mFull mCenter mMarginTopLarge>
-    <Text>Hello World</Text>
-  </Box>
+  <Text mFull mAlignCenter mMarginTopLarge>
+    Hello World
+  </Text>
 );
 ```
