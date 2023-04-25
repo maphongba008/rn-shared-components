@@ -108,18 +108,18 @@ const spacingNumberMap = {
   mPaddingVertical: "paddingVertical",
 } as const;
 
-export const stringMap = {
+const stringMap = {
   mBackgroundColor: "backgroundColor",
   mBorderColor: "borderColor",
 };
 
-export const booleanMap = {
+const booleanMap = {
   ...positionBooleanMap,
   ...borderBooleanMap,
   ...spacingBooleanMaps,
 };
 
-export const numberMap = {
+const numberMap = {
   ...borderNumberMap,
   ...spacingNumberMap,
 };
@@ -136,27 +136,8 @@ export type SharedBoxProps = {
   [key in StringProps]?: string;
 };
 
-const booleanKeys = Object.keys(booleanMap);
-const numberKeys = Object.keys(numberMap);
-const stringKeys = Object.keys(stringMap);
-
-export const getBoxStyles = (props: SharedBoxProps) => {
-  const styles: any[] = [];
-  Object.entries(props).forEach(([key, value]) => {
-    if (booleanKeys.includes(key)) {
-      if (!!value) {
-        styles.push(booleanMap[key]);
-      }
-      return;
-    }
-    if (numberKeys.includes(key) && typeof value === "number") {
-      styles.push({ [numberMap[key]]: value });
-      return;
-    }
-    if (stringKeys.includes(key) && typeof value === "string") {
-      styles.push({ [stringMap[key]]: value });
-      return;
-    }
-  });
-  return _.merge({}, ...styles);
+export const boxProps = {
+  ...booleanMap,
+  ...numberMap,
+  ...stringMap,
 };

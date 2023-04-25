@@ -1,4 +1,4 @@
-import { SharedBoxProps, getBoxStyles } from "../Box/Box.props";
+import { SharedBoxProps } from "../Box/Box.props";
 import _ from "lodash";
 const textBooleanMap = {
   mBold: { fontWeight: "bold" },
@@ -80,28 +80,8 @@ export type SharedTextProps = SharedBoxProps & {
   [key in StringProps]?: string;
 };
 
-const textBooleanKeys = Object.keys(textBooleanMap);
-const textNumberKeys = Object.keys(textNumberMap);
-const textStringKeys = Object.keys(textStringMap);
-
-export const getTextStyles = (props: SharedTextProps) => {
-  const styles: any[] = [];
-  const boxProps = getBoxStyles(props);
-  Object.entries(props).forEach(([key, value]) => {
-    if (textBooleanKeys.includes(key) && !!value) {
-      styles.push(textBooleanMap[key]);
-      return;
-    }
-    if (textNumberKeys.includes(key) && typeof value === "number") {
-      styles.push({ [textNumberMap[key]]: value });
-      return;
-    }
-    if (textStringKeys.includes(key) && typeof value === "string") {
-      styles.push({ [textStringMap[key]]: value });
-      return;
-    }
-  });
-  return _.merge(boxProps, ...styles);
+export const textProps = {
+  ...textBooleanMap,
+  ...textNumberMap,
+  ...textStringMap,
 };
-
-console.log({ textBooleanMap, textNumberMap, textStringMap });

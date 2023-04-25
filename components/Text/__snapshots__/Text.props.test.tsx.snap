@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test parse box props 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "backgroundColor": "green",
+        "color": "blue",
+        "fontSize": 20,
+        "margin": 8,
+        "marginTop": 16,
+        "paddingVertical": 32,
+        "textAlign": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  Hello world
+</Text>
+`;
