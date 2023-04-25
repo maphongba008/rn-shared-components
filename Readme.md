@@ -55,3 +55,7 @@ const App = () => (
   </Text>
 );
 ```
+
+### To add custom props
+
+Checkout the sample at [Custom Props](./components/Custom.sample.tsx)
