@@ -15,3 +15,5 @@ export const Box = React.forwardRef((props: BoxProps, ref: LegacyRef<View>) => {
     </View>
   );
 });
+
+export * from "./Box.props";

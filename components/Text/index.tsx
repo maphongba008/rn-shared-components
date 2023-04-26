@@ -21,3 +21,5 @@ export const Text = React.forwardRef(
     );
   }
 );
+
+export * from "./Text.props";
